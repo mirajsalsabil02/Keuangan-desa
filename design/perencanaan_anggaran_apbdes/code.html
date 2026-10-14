@@ -1,0 +1,790 @@
+<!DOCTYPE html>
+
+<html lang="id"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = {
+    darkMode: "class",
+    theme: {
+      extend: {
+        "colors": {
+          "on-error-container": "#93000a",
+          "on-tertiary-fixed-variant": "#004c6a",
+          "error-container": "#ffdad6",
+          "surface-variant": "#e0e3e5",
+          "on-secondary-fixed": "#001e30",
+          "on-primary": "#ffffff",
+          "on-surface": "#191c1e",
+          "secondary": "#19648f",
+          "on-tertiary-fixed": "#001e2d",
+          "surface": "#f7f9fb",
+          "surface-container": "#eceef0",
+          "surface-bright": "#f7f9fb",
+          "on-error": "#ffffff",
+          "secondary-fixed": "#cae6ff",
+          "on-tertiary": "#ffffff",
+          "primary": "#004967",
+          "surface-container-highest": "#e0e3e5",
+          "on-tertiary-container": "#a4dbff",
+          "on-secondary-container": "#005881",
+          "surface-container-lowest": "#ffffff",
+          "on-secondary": "#ffffff",
+          "secondary-fixed-dim": "#8fcdfd",
+          "inverse-on-surface": "#eff1f3",
+          "outline": "#70787f",
+          "tertiary-container": "#146285",
+          "on-surface-variant": "#40484e",
+          "inverse-surface": "#2d3133",
+          "background": "#f7f9fb",
+          "outline-variant": "#c0c7cf",
+          "tertiary": "#004966",
+          "on-primary-container": "#a5dbff",
+          "on-background": "#191c1e",
+          "on-primary-fixed": "#001e2d",
+          "secondary-container": "#8fcdfd",
+          "surface-container-high": "#e6e8ea",
+          "primary-fixed-dim": "#8bcef9",
+          "primary-fixed": "#c6e7ff",
+          "surface-container-low": "#f2f4f6",
+          "tertiary-fixed-dim": "#8ecef6",
+          "on-secondary-fixed-variant": "#004b70",
+          "tertiary-fixed": "#c5e7ff",
+          "on-primary-fixed-variant": "#004c6b",
+          "inverse-primary": "#8bcef9",
+          "primary-container": "#086288",
+          "surface-dim": "#d8dadc",
+          "error": "#ba1a1a",
+          "surface-tint": "#10658b"
+        },
+        "borderRadius": {
+          "DEFAULT": "0.125rem",
+          "lg": "0.25rem",
+          "xl": "0.5rem",
+          "full": "0.75rem"
+        },
+        "spacing": {
+          "space-sm": "0.5rem",
+          "space-md": "1rem",
+          "gutter": "1.5rem",
+          "margin": "2rem",
+          "space-lg": "1.5rem",
+          "space-xl": "2rem",
+          "space-xs": "0.25rem"
+        },
+        "fontFamily": {
+          "metric-md": [
+            "Plus Jakarta Sans"
+          ],
+          "metric-lg": [
+            "Plus Jakarta Sans"
+          ],
+          "label-sm": [
+            "Inter"
+          ],
+          "display": [
+            "Plus Jakarta Sans"
+          ],
+          "body-sm": [
+            "Inter"
+          ],
+          "label-md": [
+            "Inter"
+          ],
+          "title": [
+            "Plus Jakarta Sans"
+          ],
+          "headline-sm": [
+            "Plus Jakarta Sans"
+          ],
+          "body-md": [
+            "Inter"
+          ],
+          "headline-md": [
+            "Plus Jakarta Sans"
+          ],
+          "headline-lg": [
+            "Plus Jakarta Sans"
+          ],
+          "body-lg": [
+            "Inter"
+          ]
+        },
+        "fontSize": {
+          "metric-md": [
+            "20px",
+            {
+              "lineHeight": "26px",
+              "fontWeight": "700"
+            }
+          ],
+          "metric-lg": [
+            "30px",
+            {
+              "lineHeight": "36px",
+              "letterSpacing": "-0.01em",
+              "fontWeight": "700"
+            }
+          ],
+          "label-sm": [
+            "11px",
+            {
+              "lineHeight": "14px",
+              "letterSpacing": "0.04em",
+              "fontWeight": "600"
+            }
+          ],
+          "display": [
+            "36px",
+            {
+              "lineHeight": "44px",
+              "letterSpacing": "-0.02em",
+              "fontWeight": "700"
+            }
+          ],
+          "body-sm": [
+            "12px",
+            {
+              "lineHeight": "16px",
+              "fontWeight": "400"
+            }
+          ],
+          "label-md": [
+            "13px",
+            {
+              "lineHeight": "18px",
+              "fontWeight": "500"
+            }
+          ],
+          "title": [
+            "16px",
+            {
+              "lineHeight": "22px",
+              "fontWeight": "600"
+            }
+          ],
+          "headline-sm": [
+            "18px",
+            {
+              "lineHeight": "24px",
+              "letterSpacing": "-0.005em",
+              "fontWeight": "600"
+            }
+          ],
+          "body-md": [
+            "14px",
+            {
+              "lineHeight": "20px",
+              "fontWeight": "400"
+            }
+          ],
+          "headline-md": [
+            "22px",
+            {
+              "lineHeight": "28px",
+              "letterSpacing": "-0.01em",
+              "fontWeight": "600"
+            }
+          ],
+          "headline-lg": [
+            "28px",
+            {
+              "lineHeight": "36px",
+              "letterSpacing": "-0.02em",
+              "fontWeight": "700"
+            }
+          ],
+          "body-lg": [
+            "16px",
+            {
+              "lineHeight": "24px",
+              "fontWeight": "400"
+            }
+          ]
+        }
+      }
+    }
+  };</script></head><body class="bg-surface font-body-md text-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 h-full w-72 bg-surface-container-lowest z-50 flex flex-col justify-between shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="flex flex-col flex-1 overflow-y-auto"><div class="px-6 pt-5 pb-4"><div class="flex items-center gap-3"><img alt="SISKEUDES Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1UaMmcLQ7d88fKnKeoXZVYwdJI2B1KQiHY8mh5zKYOuOyiamw-TpQslJvgog7le4eAFphahZ4iVKAtMUpTBAjG8upjCNepjpBhRZOnEoR-i0dDTNcPSRMgElzSJeuuYklPDSTQOLxq_O6F3QTX38ykvE3lMKAJtAF6GyhExBCjMG1g-htsXH1gCzxoTpjO3xgYuhO14BsHxRXXiyNjNFxlDDFZMVhLtOLdzOHDBseyzS9ZWOD5IUbpdD0Y"/><div class="flex flex-col"><span class="font-title text-title text-primary tracking-tight">SISKEUDES Online</span><span class="font-label-sm text-label-sm text-on-surface-variant">Desa Sukamaju - Kab. Sleman</span></div></div><div class="mt-3 inline-flex items-center gap-1.5 px-2.5 py-1 rounded bg-secondary-fixed text-on-secondary-fixed"><span class="material-symbols-outlined text-sm">verified</span><span class="font-label-sm text-label-sm">TA 2024 - APBDes Murni</span></div></div><nav class="flex-1 px-3 py-2 space-y-1" data-active-classes="bg-primary-container text-on-primary font-title rounded-lg"><a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="dasbor-eksekutif" href="#"><span class="material-symbols-outlined">dashboard</span><span class="font-body-md text-body-md">Dasbor Eksekutif</span></a><a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="perencanaan-anggaran" href="#"><span class="material-symbols-outlined">table_chart</span><span class="font-body-md text-body-md">Perencanaan &amp; Anggaran</span></a><a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="penatausahaan" href="#"><span class="material-symbols-outlined">receipt_long</span><span class="font-body-md text-body-md">Penatausahaan</span></a><a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="pembukuan-kas" href="#"><span class="material-symbols-outlined">menu_book</span><span class="font-body-md text-body-md">Pembukuan &amp; Kas</span></a><a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="pelaporan-spj" href="#"><span class="material-symbols-outlined">description</span><span class="font-body-md text-body-md">Pelaporan &amp; SPJ</span></a><a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="portal-transparansi" href="#"><span class="material-symbols-outlined">public</span><span class="font-body-md text-body-md">Portal Transparansi</span></a></nav></div><div class="p-4 bg-surface-container-low"><div class="flex items-center gap-2 px-2 py-1.5 rounded bg-surface-container-lowest"><span class="relative flex h-2 w-2"><span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-secondary opacity-75"></span><span class="relative inline-flex rounded-full h-2 w-2 bg-primary"></span></span><span class="font-label-sm text-label-sm text-on-surface-variant">Online • Terhubung Server BPKP</span></div></div></aside><div class="pl-72"><header class="fixed top-0 left-72 right-0 h-16 bg-surface/90 backdrop-blur-xl z-40 shadow-[0_1px_8px_rgba(0,0,0,0.04)] px-gutter flex items-center justify-between"><div class="flex items-center gap-4"><div class="flex items-center gap-1.5 text-on-surface-variant font-label-md text-label-md"><span>Dasbor Eksekutif</span><span class="material-symbols-outlined text-sm">chevron_right</span><span class="text-primary font-semibold">Ikhtisar Finansial &amp; Early Warning</span></div><div class="hidden xl:flex items-center gap-2 px-3 py-1 rounded bg-surface-container text-on-surface-variant font-label-sm text-label-sm"><span>Pagu: <strong class="text-on-surface font-semibold">Rp 1.845.000.000</strong></span><span class="text-outline-variant">|</span><span>Realisasi: <strong class="text-on-surface font-semibold">68.4%</strong></span><span class="text-outline-variant">|</span><span>SiLPA Berjalan: <strong class="text-on-surface font-semibold">Rp 142.500.000</strong></span></div></div><div class="flex items-center gap-4"><button class="relative p-2 rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" type="button"><span class="material-symbols-outlined">notifications</span><span class="absolute top-1.5 right-1.5 w-4 h-4 rounded-full bg-error text-on-error font-label-sm text-[10px] flex items-center justify-center font-bold">3</span></button><div class="flex items-center gap-1 px-2.5 py-1.5 rounded bg-surface-container-lowest shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><span class="font-label-md text-label-md font-semibold text-primary">TA 2024</span><span class="material-symbols-outlined text-sm text-on-surface-variant">arrow_drop_down</span></div><div class="flex items-center gap-3 pl-2"><img alt="Profile" class="w-8 h-8 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCRtq96i_ksLnKYbV8ca9tO742ddYoQpOGCbh_SklRImSGFXDFHECvA5PFbLoBhecxIVF9yy83yoamTGn5sTA2Woa21svPGo1ecgyjxB76S9jTXJZqbS_BmfaZ2uYk0ADULckPV8Cywirub6IOR6xD1Heg2SRC3ud4VuoeFGLmo6ritspQn9vCrjr8cwvEQxIy1pGrXXJmrd65uUwKNeih7fgeNA2hvxKSQIaVHN0dTc-ybo-tahvjY"/><div class="hidden md:flex flex-col text-left"><span class="font-label-md text-label-md font-semibold text-on-surface leading-tight">Bpk. Budi Santoso, S.H.</span><span class="font-label-sm text-label-sm text-on-surface-variant leading-tight">Kepala Desa (KPA)</span></div><span class="material-symbols-outlined text-on-surface-variant text-sm hidden md:inline">expand_more</span></div></div></header><main class="relative pt-16 w-full min-h-screen px-gutter bg-surface"><div class="flex flex-col w-full pb-16">
+<!-- Top Command & Action Bar -->
+<div class="w-full bg-surface-container-lowest rounded-xl shadow-sm p-6 mb-6">
+<div class="flex flex-col lg:flex-row lg:items-center justify-between gap-4">
+<div class="flex flex-col">
+<div class="flex items-center gap-3">
+<span class="font-headline-lg text-headline-lg text-primary tracking-tight">Penyusunan &amp; Perubahan APBDes TA 2024</span>
+<span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm shadow-sm">
+<span class="w-2 h-2 rounded-full bg-secondary animate-pulse"></span>
+            Tahap Pembahasan Perubahan (APBDes-P)
+          </span>
+</div>
+<div class="flex items-center gap-2 mt-1 text-on-surface-variant font-body-sm text-body-sm">
+<span>Nomor Registrasi Evaluasi: <strong class="text-on-surface font-label-md">REG/BAPEDA/2024/09-SKM</strong></span>
+<span>•</span>
+<span>Terakhir diubah: 24 Oktober 2024 14:32 WIB oleh <em>Sekretaris Desa (Verifikator)</em></span>
+</div>
+</div>
+<!-- Action Buttons -->
+<div class="flex flex-wrap items-center gap-2.5">
+<button class="inline-flex items-center gap-2 px-3.5 py-2 rounded-lg bg-surface-container-low text-on-surface hover:bg-surface-container transition-colors shadow-sm font-label-md text-label-md" type="button">
+<span class="material-symbols-outlined text-lg text-secondary">sync_alt</span>
+          Import dari RKPDes
+        </button>
+<button class="inline-flex items-center gap-2 px-3.5 py-2 rounded-lg bg-surface-container-low text-on-surface hover:bg-surface-container transition-colors shadow-sm font-label-md text-label-md" type="button">
+<span class="material-symbols-outlined text-lg text-primary">save</span>
+          Simpan Draf
+        </button>
+<button class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-primary-container text-on-primary hover:bg-primary transition-colors shadow-sm font-label-md text-label-md" type="button">
+<span class="material-symbols-outlined text-lg">lock</span>
+          Kunci Anggaran (Posting)
+        </button>
+<button class="inline-flex items-center gap-2 px-3.5 py-2 rounded-lg bg-surface-container text-primary hover:bg-primary hover:text-on-primary transition-colors shadow-sm font-label-md text-label-md" type="button">
+<span class="material-symbols-outlined text-lg">print</span>
+          Cetak Perdes APBDes (Format Kemendagri)
+        </button>
+</div>
+</div>
+<!-- Navigation Tabs -->
+<div class="flex items-center gap-2 mt-6 overflow-x-auto pb-1">
+<button class="px-4 py-2.5 rounded-lg text-on-surface-variant hover:bg-surface-container font-label-md text-label-md whitespace-nowrap transition-colors flex items-center gap-2" type="button">
+<span class="material-symbols-outlined text-base">alt_route</span>
+        Matriks RPJMDes 6 Tahunan &amp; RKPDes Tahunan
+      </button>
+<button class="px-4 py-2.5 rounded-lg bg-primary-container text-on-primary font-title text-title whitespace-nowrap shadow-sm flex items-center gap-2" type="button">
+<span class="material-symbols-outlined text-base">account_balance</span>
+        Rekapitulasi Struktur APBDes (Pendapatan, Belanja, Pembiayaan)
+      </button>
+<button class="px-4 py-2.5 rounded-lg text-on-surface-variant hover:bg-surface-container font-label-md text-label-md whitespace-nowrap transition-colors flex items-center gap-2" type="button">
+<span class="material-symbols-outlined text-base">playlist_add</span>
+        Form Entri Rincian Objek Belanja
+      </button>
+<button class="px-4 py-2.5 rounded-lg text-on-surface-variant hover:bg-surface-container font-label-md text-label-md whitespace-nowrap transition-colors flex items-center gap-2" type="button">
+<span class="material-symbols-outlined text-base">history_toggle_off</span>
+        Riwayat Revisi &amp; Audit Versi (APBDes-P)
+      </button>
+</div>
+</div>
+<!-- Fiscal Summary Dashboard (KPI Strip) -->
+<div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-5 gap-4 mb-6">
+<!-- Card 1: Total Pendapatan -->
+<div class="bg-surface-container-lowest p-5 rounded-xl shadow-sm flex flex-col justify-between relative overflow-hidden">
+<div class="absolute top-0 left-0 right-0 h-1 bg-secondary"></div>
+<div class="flex items-start justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">1. Pendapatan Desa</span>
+<span class="material-symbols-outlined text-secondary">trending_up</span>
+</div>
+<div class="mt-3">
+<div class="font-metric-lg text-metric-lg text-on-surface font-mono tracking-tight">Rp 1.950.000.000</div>
+<div class="flex items-center gap-1.5 mt-1 text-on-surface-variant font-label-sm text-label-sm">
+<span class="text-secondary font-semibold">+4.2%</span>
+<span>vs target RKPDes</span>
+</div>
+</div>
+</div>
+<!-- Card 2: Total Belanja -->
+<div class="bg-surface-container-lowest p-5 rounded-xl shadow-sm flex flex-col justify-between relative overflow-hidden">
+<div class="absolute top-0 left-0 right-0 h-1 bg-primary"></div>
+<div class="flex items-start justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">2. Belanja Desa</span>
+<span class="material-symbols-outlined text-primary">shopping_bag</span>
+</div>
+<div class="mt-3">
+<div class="font-metric-lg text-metric-lg text-on-surface font-mono tracking-tight">Rp 2.050.000.000</div>
+<div class="flex items-center gap-1.5 mt-1 text-on-surface-variant font-label-sm text-label-sm">
+<span>3 Bidang Kegiatan Utama</span>
+</div>
+</div>
+</div>
+<!-- Card 3: Defisit Anggaran -->
+<div class="bg-surface-container-lowest p-5 rounded-xl shadow-sm flex flex-col justify-between relative overflow-hidden">
+<div class="absolute top-0 left-0 right-0 h-1 bg-error"></div>
+<div class="flex items-start justify-between">
+<span class="font-label-sm text-label-sm text-error uppercase tracking-wider">Defisit Operasional</span>
+<span class="material-symbols-outlined text-error">trending_down</span>
+</div>
+<div class="mt-3">
+<div class="font-metric-lg text-metric-lg text-error font-mono tracking-tight">(Rp 100.000.000)</div>
+<div class="flex items-center gap-1 mt-1 text-on-surface-variant font-label-sm text-label-sm">
+<span>Selisih Belanja &gt; Pendapatan</span>
+</div>
+</div>
+</div>
+<!-- Card 4: Penerimaan SiLPA -->
+<div class="bg-surface-container-lowest p-5 rounded-xl shadow-sm flex flex-col justify-between relative overflow-hidden">
+<div class="absolute top-0 left-0 right-0 h-1 bg-tertiary"></div>
+<div class="flex items-start justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">3.1 SiLPA TA 2023</span>
+<span class="material-symbols-outlined text-tertiary">savings</span>
+</div>
+<div class="mt-3">
+<div class="font-metric-lg text-metric-lg text-on-surface font-mono tracking-tight">Rp 100.000.000</div>
+<div class="flex items-center gap-1 mt-1 text-on-surface-variant font-label-sm text-label-sm">
+<span>Audit BPKP Verified</span>
+</div>
+</div>
+</div>
+<!-- Card 5: Status Sisa Lebih Bersih (Berimbang) -->
+<div class="bg-surface-container-low p-5 rounded-xl shadow-sm flex flex-col justify-between relative overflow-hidden">
+<div class="absolute top-0 left-0 right-0 h-1 bg-secondary"></div>
+<div class="flex items-start justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">SiLPA Netto TA 2024</span>
+<span class="material-symbols-outlined text-secondary">check_circle</span>
+</div>
+<div class="mt-3">
+<div class="font-metric-lg text-metric-lg text-secondary font-mono tracking-tight">Rp 0,00</div>
+<div class="inline-flex items-center gap-1 mt-1 px-2 py-0.5 rounded bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm font-semibold">
+<span class="material-symbols-outlined text-xs">verified</span>
+          ANGGARAN BERIMBANG
+        </div>
+</div>
+</div>
+</div>
+<!-- Main Content Layout Grid (Table Detail + Version Audit Sidebar) -->
+<div class="grid grid-cols-1 xl:grid-cols-12 gap-6 items-start">
+<!-- Left Main Column: Interactive Financial Ledger Accordion Table -->
+<div class="xl:col-span-8 flex flex-col gap-4">
+<div class="bg-surface-container-lowest rounded-xl shadow-sm p-6">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between pb-4 gap-3">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary text-2xl">account_tree</span>
+<div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Struktur Kode Rekening APBDes 2024</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Hierarki klasifikasi anggaran sesuai Permendagri No. 20 Tahun 2018</p>
+</div>
+</div>
+<div class="flex items-center gap-2">
+<button class="px-3 py-1.5 rounded-lg bg-surface-container text-on-surface font-label-sm text-label-sm hover:bg-surface-container-high transition-colors" id="expandAllBtn" type="button">
+              Buka Semua
+            </button>
+<button class="px-3 py-1.5 rounded-lg bg-surface-container text-on-surface font-label-sm text-label-sm hover:bg-surface-container-high transition-colors" id="collapseAllBtn" type="button">
+              Tutup Semua
+            </button>
+</div>
+</div>
+<!-- Table Container -->
+<div class="overflow-x-auto">
+<table class="w-full text-left font-body-md text-body-md">
+<thead>
+<tr class="bg-surface-container text-on-surface-variant font-label-sm text-label-sm uppercase tracking-wider">
+<th class="py-3 px-4 w-32">Kode Rek.</th>
+<th class="py-3 px-4">Uraian / Akun Anggaran</th>
+<th class="py-3 px-4 text-right w-44">Pagu APBDes Murni</th>
+<th class="py-3 px-4 text-right w-44">Perubahan (+ / -)</th>
+<th class="py-3 px-4 text-right w-48">APBDes-P 2024</th>
+<th class="py-3 px-4 text-center w-20">Aksi</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-surface-container-highest">
+<!-- KELOMPOK 1: PENDAPATAN -->
+<tr class="bg-surface-container-low font-title text-title text-primary cursor-pointer hover:bg-surface-container transition-colors" onclick="toggleGroup('grp-1')">
+<td class="py-3 px-4 font-mono font-bold">1.</td>
+<td class="py-3 px-4 flex items-center gap-2">
+<span class="material-symbols-outlined text-sm transition-transform duration-200" id="icon-grp-1">expand_more</span>
+<span>PENDAPATAN DESA</span>
+</td>
+<td class="py-3 px-4 text-right font-mono text-on-surface">1.890.000.000</td>
+<td class="py-3 px-4 text-right font-mono text-secondary font-semibold">+60.000.000</td>
+<td class="py-3 px-4 text-right font-mono font-bold text-primary">1.950.000.000</td>
+<td class="py-3 px-4 text-center">
+<span class="material-symbols-outlined text-on-surface-variant hover:text-primary cursor-pointer text-lg">more_vert</span>
+</td>
+</tr>
+<!-- Sub Group 1.1 -->
+<tr class="grp-1 bg-surface-container-lowest hover:bg-surface-container-low transition-colors">
+<td class="py-2.5 px-4 font-mono pl-8 text-on-surface-variant font-label-md">1.1</td>
+<td class="py-2.5 px-4 font-label-md text-on-surface">Pendapatan Asli Desa (PADes)</td>
+<td class="py-2.5 px-4 text-right font-mono text-on-surface-variant">200.000.000</td>
+<td class="py-2.5 px-4 text-right font-mono text-secondary">+20.000.000</td>
+<td class="py-2.5 px-4 text-right font-mono font-semibold text-on-surface">220.000.000</td>
+<td class="py-2.5 px-4 text-center">
+<button class="text-primary hover:text-secondary" type="button"><span class="material-symbols-outlined text-base">edit_note</span></button>
+</td>
+</tr>
+<tr class="grp-1 bg-surface-container-lowest/50 text-body-sm text-on-surface-variant">
+<td class="py-1 px-4 font-mono pl-12 text-outline">1.1.1</td>
+<td class="py-1 px-4 pl-10 italic">↳ Hasil Usaha BUMDes "Mandiri Sukamaju"</td>
+<td class="py-1 px-4 text-right font-mono">80.000.000</td>
+<td class="py-1 px-4 text-right font-mono text-secondary">+15.000.000</td>
+<td class="py-1 px-4 text-right font-mono">95.000.000</td>
+<td></td>
+</tr>
+<tr class="grp-1 bg-surface-container-lowest/50 text-body-sm text-on-surface-variant">
+<td class="py-1 px-4 font-mono pl-12 text-outline">1.1.2</td>
+<td class="py-1 px-4 pl-10 italic">↳ Pengelolaan Tanah Kas Desa (Sewa Lahan)</td>
+<td class="py-1 px-4 text-right font-mono">120.000.000</td>
+<td class="py-1 px-4 text-right font-mono text-secondary">+5.000.000</td>
+<td class="py-1 px-4 text-right font-mono">125.000.000</td>
+<td></td>
+</tr>
+<!-- Sub Group 1.2 -->
+<tr class="grp-1 bg-surface-container-lowest hover:bg-surface-container-low transition-colors">
+<td class="py-2.5 px-4 font-mono pl-8 text-on-surface-variant font-label-md">1.2</td>
+<td class="py-2.5 px-4 font-label-md text-on-surface">Transfer Dana Desa (APBN)</td>
+<td class="py-2.5 px-4 text-right font-mono text-on-surface-variant">1.100.000.000</td>
+<td class="py-2.5 px-4 text-right font-mono text-outline">0</td>
+<td class="py-2.5 px-4 text-right font-mono font-semibold text-on-surface">1.100.000.000</td>
+<td class="py-2.5 px-4 text-center">
+<button class="text-primary hover:text-secondary" type="button"><span class="material-symbols-outlined text-base">edit_note</span></button>
+</td>
+</tr>
+<!-- Sub Group 1.3 -->
+<tr class="grp-1 bg-surface-container-lowest hover:bg-surface-container-low transition-colors">
+<td class="py-2.5 px-4 font-mono pl-8 text-on-surface-variant font-label-md">1.3</td>
+<td class="py-2.5 px-4 font-label-md text-on-surface">Transfer Alokasi Dana Desa (ADD - APBD Kab)</td>
+<td class="py-2.5 px-4 text-right font-mono text-on-surface-variant">470.000.000</td>
+<td class="py-2.5 px-4 text-right font-mono text-secondary">+30.000.000</td>
+<td class="py-2.5 px-4 text-right font-mono font-semibold text-on-surface">500.000.000</td>
+<td class="py-2.5 px-4 text-center">
+<button class="text-primary hover:text-secondary" type="button"><span class="material-symbols-outlined text-base">edit_note</span></button>
+</td>
+</tr>
+<!-- Sub Group 1.4 -->
+<tr class="grp-1 bg-surface-container-lowest hover:bg-surface-container-low transition-colors">
+<td class="py-2.5 px-4 font-mono pl-8 text-on-surface-variant font-label-md">1.4</td>
+<td class="py-2.5 px-4 font-label-md text-on-surface">Bagi Hasil Pajak &amp; Retribusi Daerah (BHRD)</td>
+<td class="py-2.5 px-4 text-right font-mono text-on-surface-variant">120.000.000</td>
+<td class="py-2.5 px-4 text-right font-mono text-secondary">+10.000.000</td>
+<td class="py-2.5 px-4 text-right font-mono font-semibold text-on-surface">130.000.000</td>
+<td class="py-2.5 px-4 text-center">
+<button class="text-primary hover:text-secondary" type="button"><span class="material-symbols-outlined text-base">edit_note</span></button>
+</td>
+</tr>
+<!-- KELOMPOK 2: BELANJA -->
+<tr class="bg-surface-container-low font-title text-title text-primary cursor-pointer hover:bg-surface-container transition-colors" onclick="toggleGroup('grp-2')">
+<td class="py-3 px-4 font-mono font-bold">2.</td>
+<td class="py-3 px-4 flex items-center gap-2">
+<span class="material-symbols-outlined text-sm transition-transform duration-200" id="icon-grp-2">expand_more</span>
+<span>BELANJA DESA</span>
+</td>
+<td class="py-3 px-4 text-right font-mono text-on-surface">2.040.000.000</td>
+<td class="py-3 px-4 text-right font-mono text-error font-semibold">+10.000.000</td>
+<td class="py-3 px-4 text-right font-mono font-bold text-primary">2.050.000.000</td>
+<td class="py-3 px-4 text-center">
+<span class="material-symbols-outlined text-on-surface-variant hover:text-primary cursor-pointer text-lg">more_vert</span>
+</td>
+</tr>
+<!-- Sub Group 2.1 -->
+<tr class="grp-2 bg-surface-container-lowest hover:bg-surface-container-low transition-colors">
+<td class="py-2.5 px-4 font-mono pl-8 text-on-surface-variant font-label-md">2.1</td>
+<td class="py-2.5 px-4 font-label-md text-on-surface">Belanja Pegawai (Siltap &amp; Tunjangan)</td>
+<td class="py-2.5 px-4 text-right font-mono text-on-surface-variant">420.000.000</td>
+<td class="py-2.5 px-4 text-right font-mono text-outline">0</td>
+<td class="py-2.5 px-4 text-right font-mono font-semibold text-on-surface">420.000.000</td>
+<td class="py-2.5 px-4 text-center">
+<button class="text-primary hover:text-secondary" type="button"><span class="material-symbols-outlined text-base">edit_note</span></button>
+</td>
+</tr>
+<tr class="grp-2 bg-surface-container-lowest/50 text-body-sm text-on-surface-variant">
+<td class="py-1 px-4 font-mono pl-12 text-outline">2.1.1</td>
+<td class="py-1 px-4 pl-10 italic">↳ Penghasilan Tetap Kepala Desa &amp; Perangkat</td>
+<td class="py-1 px-4 text-right font-mono">360.000.000</td>
+<td class="py-1 px-4 text-right font-mono text-outline">0</td>
+<td class="py-1 px-4 text-right font-mono">360.000.000</td>
+<td></td>
+</tr>
+<!-- Sub Group 2.2 -->
+<tr class="grp-2 bg-surface-container-lowest hover:bg-surface-container-low transition-colors">
+<td class="py-2.5 px-4 font-mono pl-8 text-on-surface-variant font-label-md">2.2</td>
+<td class="py-2.5 px-4 font-label-md text-on-surface">Belanja Barang dan Jasa (Operasional Kantor)</td>
+<td class="py-2.5 px-4 text-right font-mono text-on-surface-variant">595.000.000</td>
+<td class="py-2.5 px-4 text-right font-mono text-error font-medium">-15.000.000</td>
+<td class="py-2.5 px-4 text-right font-mono font-semibold text-on-surface">580.000.000</td>
+<td class="py-2.5 px-4 text-center">
+<button class="text-primary hover:text-secondary" type="button"><span class="material-symbols-outlined text-base">edit_note</span></button>
+</td>
+</tr>
+<tr class="grp-2 bg-surface-container-lowest/50 text-body-sm text-on-surface-variant">
+<td class="py-1 px-4 font-mono pl-12 text-outline">2.2.1</td>
+<td class="py-1 px-4 pl-10 italic">↳ Belanja Listrik, Air, &amp; Langganan Internet Kantor</td>
+<td class="py-1 px-4 text-right font-mono">48.000.000</td>
+<td class="py-1 px-4 text-right font-mono text-error">-3.000.000</td>
+<td class="py-1 px-4 text-right font-mono">45.000.000</td>
+<td></td>
+</tr>
+<!-- Sub Group 2.3 -->
+<tr class="grp-2 bg-surface-container-lowest hover:bg-surface-container-low transition-colors">
+<td class="py-2.5 px-4 font-mono pl-8 text-on-surface-variant font-label-md">2.3</td>
+<td class="py-2.5 px-4 font-label-md text-on-surface">Belanja Modal (Pembangunan Infrastruktur Fisik)</td>
+<td class="py-2.5 px-4 text-right font-mono text-on-surface-variant">1.025.000.000</td>
+<td class="py-2.5 px-4 text-right font-mono text-secondary font-medium">+25.000.000</td>
+<td class="py-2.5 px-4 text-right font-mono font-semibold text-on-surface">1.050.000.000</td>
+<td class="py-2.5 px-4 text-center">
+<button class="text-primary hover:text-secondary" type="button"><span class="material-symbols-outlined text-base">edit_note</span></button>
+</td>
+</tr>
+<tr class="grp-2 bg-surface-container-lowest/50 text-body-sm text-on-surface-variant">
+<td class="py-1 px-4 font-mono pl-12 text-outline">2.3.1</td>
+<td class="py-1 px-4 pl-10 italic">↳ Pengaspalan Jalan Usaha Tani RT 04 RW 02</td>
+<td class="py-1 px-4 text-right font-mono">350.000.000</td>
+<td class="py-1 px-4 text-right font-mono text-outline">0</td>
+<td class="py-1 px-4 text-right font-mono">350.000.000</td>
+<td></td>
+</tr>
+<tr class="grp-2 bg-surface-container-lowest/50 text-body-sm text-on-surface-variant">
+<td class="py-1 px-4 font-mono pl-12 text-outline">2.3.2</td>
+<td class="py-1 px-4 pl-10 italic">↳ Normalisasi Saluran Irigasi Tersier Blok Selatan</td>
+<td class="py-1 px-4 text-right font-mono">160.000.000</td>
+<td class="py-1 px-4 text-right font-mono text-secondary font-semibold">+25.000.000</td>
+<td class="py-1 px-4 text-right font-mono">185.000.000</td>
+<td></td>
+</tr>
+<!-- KELOMPOK 3: PEMBIAYAAN -->
+<tr class="bg-surface-container-low font-title text-title text-primary cursor-pointer hover:bg-surface-container transition-colors" onclick="toggleGroup('grp-3')">
+<td class="py-3 px-4 font-mono font-bold">3.</td>
+<td class="py-3 px-4 flex items-center gap-2">
+<span class="material-symbols-outlined text-sm transition-transform duration-200" id="icon-grp-3">expand_more</span>
+<span>PEMBIAYAAN DESA</span>
+</td>
+<td class="py-3 px-4 text-right font-mono text-on-surface">150.000.000</td>
+<td class="py-3 px-4 text-right font-mono text-error font-semibold">-50.000.000</td>
+<td class="py-3 px-4 text-right font-mono font-bold text-primary">100.000.000</td>
+<td class="py-3 px-4 text-center">
+<span class="material-symbols-outlined text-on-surface-variant hover:text-primary cursor-pointer text-lg">more_vert</span>
+</td>
+</tr>
+<!-- Sub Group 3.1 -->
+<tr class="grp-3 bg-surface-container-lowest hover:bg-surface-container-low transition-colors">
+<td class="py-2.5 px-4 font-mono pl-8 text-on-surface-variant font-label-md">3.1</td>
+<td class="py-2.5 px-4 font-label-md text-on-surface">Penerimaan Pembiayaan (SiLPA TA 2023)</td>
+<td class="py-2.5 px-4 text-right font-mono text-on-surface-variant">150.000.000</td>
+<td class="py-2.5 px-4 text-right font-mono text-outline">0</td>
+<td class="py-2.5 px-4 text-right font-mono font-semibold text-on-surface">150.000.000</td>
+<td class="py-2.5 px-4 text-center">
+<button class="text-primary hover:text-secondary" type="button"><span class="material-symbols-outlined text-base">edit_note</span></button>
+</td>
+</tr>
+<!-- Sub Group 3.2 -->
+<tr class="grp-3 bg-surface-container-lowest hover:bg-surface-container-low transition-colors">
+<td class="py-2.5 px-4 font-mono pl-8 text-on-surface-variant font-label-md">3.2</td>
+<td class="py-2.5 px-4 font-label-md text-on-surface">Pengeluaran Pembiayaan (Penyertaan Modal)</td>
+<td class="py-2.5 px-4 text-right font-mono text-on-surface-variant">0</td>
+<td class="py-2.5 px-4 text-right font-mono text-error font-medium">+50.000.000</td>
+<td class="py-2.5 px-4 text-right font-mono font-semibold text-on-surface">50.000.000</td>
+<td class="py-2.5 px-4 text-center">
+<button class="text-primary hover:text-secondary" type="button"><span class="material-symbols-outlined text-base">edit_note</span></button>
+</td>
+</tr>
+<tr class="grp-3 bg-surface-container-lowest/50 text-body-sm text-on-surface-variant">
+<td class="py-1 px-4 font-mono pl-12 text-outline">3.2.1</td>
+<td class="py-1 px-4 pl-10 italic">↳ Penyertaan Modal BUMDes Mandiri (Unit Air Bersih)</td>
+<td class="py-1 px-4 text-right font-mono">0</td>
+<td class="py-1 px-4 text-right font-mono text-error">+50.000.000</td>
+<td class="py-1 px-4 text-right font-mono">50.000.000</td>
+<td></td>
+</tr>
+</tbody>
+<!-- Table Footer Total Summary -->
+<tfoot class="bg-surface-container font-title text-title">
+<tr>
+<td class="py-3 px-4 text-on-surface" colspan="2">PEMBIAYAAN NETTO (3.1 - 3.2)</td>
+<td class="py-3 px-4 text-right font-mono">150.000.000</td>
+<td class="py-3 px-4 text-right font-mono text-error">-50.000.000</td>
+<td class="py-3 px-4 text-right font-mono font-bold text-primary">100.000.000</td>
+<td></td>
+</tr>
+<tr class="bg-surface-container-high text-primary">
+<td class="py-3 px-4 font-headline-sm text-headline-sm" colspan="2">SISA LEBIH ANGGARAN (SiLPA TAHUN BERJALAN)</td>
+<td class="py-3 px-4 text-right font-mono">0</td>
+<td class="py-3 px-4 text-right font-mono">0</td>
+<td class="py-3 px-4 text-right font-mono font-bold text-secondary font-headline-sm text-headline-sm">Rp 0,00</td>
+<td class="py-3 px-4 text-center">
+<span class="material-symbols-outlined text-secondary">verified</span>
+</td>
+</tr>
+</tfoot>
+</table>
+</div>
+</div>
+<!-- Quick Inline Visual: Komposisi Belanja APBDes-P -->
+<div class="bg-surface-container-lowest rounded-xl shadow-sm p-6">
+<h3 class="font-headline-sm text-headline-sm text-on-surface mb-3 flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary">pie_chart</span>
+          Proporsi Alokasi Belanja APBDes Perubahan 2024
+        </h3>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-4 pt-2">
+<div class="p-4 rounded-lg bg-surface-container-low flex flex-col justify-between">
+<div>
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase">Belanja Pegawai (20.5%)</span>
+<div class="font-metric-md text-metric-md text-on-surface font-mono mt-1">Rp 420.000.000</div>
+</div>
+<div class="w-full bg-surface-container h-2 rounded-full overflow-hidden mt-3">
+<div class="bg-outline h-full" style="width: 20.5%"></div>
+</div>
+</div>
+<div class="p-4 rounded-lg bg-surface-container-low flex flex-col justify-between">
+<div>
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase">Barang &amp; Jasa (28.3%)</span>
+<div class="font-metric-md text-metric-md text-on-surface font-mono mt-1">Rp 580.000.000</div>
+</div>
+<div class="w-full bg-surface-container h-2 rounded-full overflow-hidden mt-3">
+<div class="bg-primary h-full" style="width: 28.3%"></div>
+</div>
+</div>
+<div class="p-4 rounded-lg bg-surface-container-low flex flex-col justify-between">
+<div>
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase">Belanja Modal Fisik (51.2%)</span>
+<div class="font-metric-md text-metric-md text-primary font-mono mt-1">Rp 1.050.000.000</div>
+</div>
+<div class="w-full bg-surface-container h-2 rounded-full overflow-hidden mt-3">
+<div class="bg-secondary h-full" style="width: 51.2%"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Right Column: Side-by-side Audit Versi Perubahan Anggaran (APBDes-P) -->
+<div class="xl:col-span-4 flex flex-col gap-6">
+<!-- Audit Perubahan Box -->
+<div class="bg-surface-container-lowest rounded-xl shadow-sm p-6 relative overflow-hidden">
+<div class="flex items-center justify-between pb-4">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">change_circle</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Audit Komparasi Versi</h3>
+</div>
+<span class="px-2 py-0.5 rounded bg-surface-container text-on-surface-variant font-mono text-xs">V.1.0 ➔ V.2.1</span>
+</div>
+<!-- Side-by-Side Version Card -->
+<div class="grid grid-cols-2 gap-3 p-3 bg-surface-container-low rounded-lg mb-5 text-center">
+<div class="p-2 bg-surface-container-lowest rounded shadow-xs">
+<span class="font-label-sm text-label-sm text-on-surface-variant block">APBDes Murni</span>
+<span class="font-title text-title text-on-surface font-semibold block">Versi 1.0</span>
+<span class="font-mono text-xs text-outline">Ditetapkan: Maret 2024</span>
+</div>
+<div class="p-2 bg-secondary-fixed text-on-secondary-fixed rounded shadow-xs">
+<span class="font-label-sm text-label-sm text-on-secondary-fixed block">APBDes Perubahan</span>
+<span class="font-title text-title font-semibold block">Versi 2.1 (Draf)</span>
+<span class="font-mono text-xs text-on-secondary-fixed">Oktober 2024</span>
+</div>
+</div>
+<!-- Shift Items Log -->
+<div class="space-y-4">
+<h4 class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Pergeseran Anggaran Signifikan</h4>
+<!-- Shift Card 1 -->
+<div class="p-3.5 rounded-lg bg-surface-container-lowest shadow-sm flex flex-col gap-2">
+<div class="flex items-center justify-between">
+<span class="font-title text-title text-on-surface">Normalisasi Irigasi Tersier</span>
+<span class="font-mono text-xs font-bold text-secondary bg-secondary-fixed px-2 py-0.5 rounded">
+                +Rp 25.000.000
+              </span>
+</div>
+<div class="flex items-center justify-between text-xs font-mono text-on-surface-variant">
+<span>Semula: Rp 160 Jt</span>
+<span class="material-symbols-outlined text-xs">arrow_forward</span>
+<span class="text-on-surface font-semibold">Menjadi: Rp 185 Jt</span>
+</div>
+<div class="p-2 rounded bg-surface-container-low text-body-sm text-on-surface-variant">
+<strong class="text-on-surface font-label-sm">Dasar Musdes Perubahan:</strong> Lonjakan sedimentasi pasca curah hujan ekstrem, prioritas ketahanan pangan blok selatan.
+            </div>
+</div>
+<!-- Shift Card 2 -->
+<div class="p-3.5 rounded-lg bg-surface-container-lowest shadow-sm flex flex-col gap-2">
+<div class="flex items-center justify-between">
+<span class="font-title text-title text-on-surface">Operasional &amp; ATK Kantor</span>
+<span class="font-mono text-xs font-bold text-error bg-error-container px-2 py-0.5 rounded">
+                -Rp 15.000.000
+              </span>
+</div>
+<div class="flex items-center justify-between text-xs font-mono text-on-surface-variant">
+<span>Semula: Rp 95 Jt</span>
+<span class="material-symbols-outlined text-xs">arrow_forward</span>
+<span class="text-on-surface font-semibold">Menjadi: Rp 80 Jt</span>
+</div>
+<div class="p-2 rounded bg-surface-container-low text-body-sm text-on-surface-variant">
+<strong class="text-on-surface font-label-sm">Dasar Musdes Perubahan:</strong> Efisiensi belanja cetak fisik melalui digitalisasi surat desa &amp; tanda tangan elektronik.
+            </div>
+</div>
+<!-- Shift Card 3 -->
+<div class="p-3.5 rounded-lg bg-surface-container-lowest shadow-sm flex flex-col gap-2">
+<div class="flex items-center justify-between">
+<span class="font-title text-title text-on-surface">Penyertaan Modal BUMDes</span>
+<span class="font-mono text-xs font-bold text-primary bg-secondary-fixed px-2 py-0.5 rounded">
+                +Rp 50.000.000
+              </span>
+</div>
+<div class="flex items-center justify-between text-xs font-mono text-on-surface-variant">
+<span>Semula: Rp 0,00</span>
+<span class="material-symbols-outlined text-xs">arrow_forward</span>
+<span class="text-on-surface font-semibold">Menjadi: Rp 50 Jt</span>
+</div>
+<div class="p-2 rounded bg-surface-container-low text-body-sm text-on-surface-variant">
+<strong class="text-on-surface font-label-sm">Dasar Musdes Perubahan:</strong> Realokasi SiLPA untuk penyediaan intake air bersih Dusun Krajan.
+            </div>
+</div>
+</div>
+<!-- Legislative & Approval Timeline Footnote -->
+<div class="mt-6 pt-4 bg-surface-container-low -mx-6 -mb-6 p-6">
+<div class="flex items-center justify-between mb-3">
+<span class="font-label-sm text-label-sm uppercase text-on-surface-variant font-semibold">Status Pengesahan Regulasi</span>
+<span class="font-mono text-xs text-primary font-bold">Langkah 3/4</span>
+</div>
+<div class="space-y-2">
+<div class="flex items-center gap-2 text-body-sm text-on-surface">
+<span class="material-symbols-outlined text-secondary text-sm">check_circle</span>
+<span>1. Musrenbangdes Khusus Perubahan</span>
+</div>
+<div class="flex items-center gap-2 text-body-sm text-on-surface">
+<span class="material-symbols-outlined text-secondary text-sm">check_circle</span>
+<span>2. Kesepakatan Bersama BPD Sukamaju</span>
+</div>
+<div class="flex items-center gap-2 text-body-sm text-primary font-semibold">
+<span class="material-symbols-outlined text-primary text-sm animate-spin">autorenew</span>
+<span>3. Evaluasi Tim Anggaran Kecamatan &amp; Bappeda</span>
+</div>
+<div class="flex items-center gap-2 text-body-sm text-outline">
+<span class="material-symbols-outlined text-outline text-sm">radio_button_unchecked</span>
+<span>4. Penetapan Perdes APBDes-P 2024</span>
+</div>
+</div>
+<div class="mt-5 flex gap-2">
+<button class="w-full py-2 px-3 rounded-lg bg-surface-container text-on-surface font-label-md text-label-md hover:bg-surface-container-high transition-colors flex items-center justify-center gap-2" type="button">
+<span class="material-symbols-outlined text-base">manage_search</span>
+              Lihat Log Audit Lengkap
+            </button>
+</div>
+</div>
+</div>
+<!-- Quick Action / Regulatory Guide Card -->
+<div class="bg-surface-container-lowest rounded-xl shadow-sm p-5 flex items-start gap-3">
+<span class="material-symbols-outlined text-secondary text-2xl flex-shrink-0">gavel</span>
+<div class="flex flex-col">
+<span class="font-title text-title text-on-surface">Ketentuan Perubahan APBDes</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">
+            Sesuai Pasal 38 Permendagri 20/2018, perubahan hanya dapat dilakukan 1 (satu) kali dalam 1 tahun anggaran, kecuali dalam keadaan darurat atau bencana alam.
+          </p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script>
+  function toggleGroup(groupClass) {
+    const rows = document.querySelectorAll('.' + groupClass);
+    const icon = document.getElementById('icon-' + groupClass);
+    let isHidden = false;
+
+    rows.forEach(row => {
+      if (row.classList.contains('hidden')) {
+        row.classList.remove('hidden');
+        isHidden = false;
+      } else {
+        row.classList.add('hidden');
+        isHidden = true;
+      }
+    });
+
+    if (icon) {
+      icon.style.transform = isHidden ? 'rotate(-90deg)' : 'rotate(0deg)';
+    }
+  }
+
+  document.getElementById('expandAllBtn')?.addEventListener('click', () => {
+    ['grp-1', 'grp-2', 'grp-3'].forEach(cls => {
+      document.querySelectorAll('.' + cls).forEach(r => r.classList.remove('hidden'));
+      const ic = document.getElementById('icon-' + cls);
+      if (ic) ic.style.transform = 'rotate(0deg)';
+    });
+  });
+
+  document.getElementById('collapseAllBtn')?.addEventListener('click', () => {
+    ['grp-1', 'grp-2', 'grp-3'].forEach(cls => {
+      document.querySelectorAll('.' + cls).forEach(r => r.classList.add('hidden'));
+      const ic = document.getElementById('icon-' + cls);
+      if (ic) ic.style.transform = 'rotate(-90deg)';
+    });
+  });
+</script></main></div></body></html>
